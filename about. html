@@ -4,18 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<title>Pavitra Muthukrishnan - Strategic Account Management &amp; Business Operations</title>
-<meta name="description" content="Pavitra Muthukrishnan helps businesses simplify operations, strengthen client relationships, and solve complex business challenges through strategic thinking and AI-enabled solutions.">
-<meta property="og:title" content="Pavitra Muthukrishnan - Strategic Account Management & Business Operations">
-<meta property="og:description" content="Nine years across healthcare, media, retail, education, and branding - turning complexity into clarity.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>About - Pavitra Muthukrishnan</title>
+<meta name="description" content="Nine years across healthcare, media, retail, education, and branding - a career built on solving problems, not following one industry.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   PAVITRA MUTHUKRISHNAN - EXECUTIVE PORTFOLIO
+   PAVITRA MUTHUKRISHNAN -- EXECUTIVE PORTFOLIO
    Design tokens
    ============================================================ */
 :root{
@@ -273,6 +267,40 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
   outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;
 }
 
+/* ---------- Profile image ---------- */
+.profile-photo{
+  width:180px; height:180px; border-radius:20px;
+  object-fit:cover; border:1px solid var(--border);
+  margin-bottom:var(--space-4);
+  box-shadow:0 20px 40px -20px rgba(17,24,39,.25);
+  filter:grayscale(45%);
+  transition:filter .4s var(--ease), transform .4s var(--ease);
+}
+.profile-photo:hover{
+  filter:grayscale(0%);
+  transform:translateY(-2px);
+}
+@media (max-width:600px){
+  .profile-photo{width:140px; height:140px; border-radius:16px;}
+}
+
+/* ---------- Case study image gallery ---------- */
+.cs-gallery{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-3);
+  margin-top:var(--space-3);
+}
+.cs-gallery figure{margin:0;}
+.cs-gallery img{
+  width:100%; height:auto; display:block;
+  border:1px solid var(--border); border-radius:var(--radius-md);
+}
+.cs-gallery figcaption{
+  font-size:13px; color:var(--text-secondary); margin-top:6px;
+}
+@media (max-width:600px){
+  .cs-gallery{grid-template-columns:1fr;}
+}
+
 @media (max-width:600px){
   body{font-size:16px;}
   section{padding:var(--space-6) 0;}
@@ -280,28 +308,12 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
 }
 
 </style>
-<link rel="canonical" href="https://pavitramuthukrishnan.com/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Pavitra Muthukrishnan",
-  "jobTitle": "Strategic Account Management & Business Operations",
-  "email": "pavitra962023@gmail.com",
-  "telephone": "+91 8122636839",
-  "address": {"@type": "PostalAddress","addressLocality": "Madurai","addressRegion": "Tamil Nadu","addressCountry": "India"},
-  "sameAs": ["https://linkedin.com/in/pavitra-muthukrishnan-b9a6038a"]
-}
-</script>
 </head>
 <body>
-
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a href="index.html" class="nav-mark">Pavitra Muthukrishnan</a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -313,122 +325,88 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" style="padding-bottom:var(--space-5);">
   <div class="wrap">
-    <p class="hero-role">Strategic Account Management · Business Operations · Client Success · AI Transformation</p>
-    <h1>Turning business complexity into clear, measurable outcomes.</h1>
-    <p class="lede">I help businesses simplify operations, strengthen customer relationships, and solve complex business challenges through strategic thinking, operational excellence, and AI-enabled solutions.</p>
-    <div class="btn-row">
-      <a href="experience.html" class="btn btn-primary">Explore Experience</a>
-      <a href="resume/index.html" class="btn btn-secondary">View Resume</a>
-    </div>
-
-    <div class="arc-strip" aria-label="Career path across industries">
-      <span class="arc-item">Healthcare</span>
-      <span class="arc-item">Media</span>
-      <span class="arc-item">Retail</span>
-      <span class="arc-item">Education</span>
-      <span class="arc-item current">AI-Enabled Business Operations</span>
+    <div style="display:grid; grid-template-columns:180px 1fr; gap:var(--space-5); align-items:start; max-width:var(--content-width);">
+      <img src="assets/images/profile.jpg" alt="Pavitra Muthukrishnan" class="profile-photo" style="margin-bottom:0;">
+      <div>
+        <span class="eyebrow">About</span>
+        <h1>Turning Complexity into Clarity</h1>
+        <p class="lede">My career has never followed a single industry - it has followed a single purpose: solving problems.</p>
+      </div>
     </div>
   </div>
 </header>
 
-<section class="bg-secondary reveal">
+<style>
+@media (max-width:600px){
+  .hero .wrap > div{grid-template-columns:1fr!important; text-align:left;}
+}
+</style>
+
+<section class="tight reveal">
+  <div class="wrap prose">
+    <p>From healthcare marketing and media production to retail leadership and international education, every role has strengthened my ability to understand businesses, build relationships, and execute solutions that create value.</p>
+    <p>I believe successful account management goes beyond maintaining relationships. It requires understanding business goals, aligning stakeholders, anticipating challenges, and delivering consistent results.</p>
+    <p>Today, I bring together operational thinking, strategic communication, and AI-enabled workflows to help teams work smarter and businesses grow sustainably.</p>
+    <p>Alongside my core work, I'm self-taught in conversational design and am currently building a few SaaS-related projects, applying the same problem-first approach to product and workflow design.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">About</span>
-      <h2>Turning Complexity into Clarity</h2>
+      <span class="eyebrow">Principles</span>
+      <h2>What Defines My Work</h2>
     </div>
     <div class="grid grid-2">
-      <p class="text-secondary" style="font-size:19px;">My career has never followed a single industry - it has followed a single purpose: solving problems. From healthcare marketing and media production to retail leadership and international education, every role has strengthened my ability to understand businesses, build relationships, and execute solutions that create value.</p>
-      <p class="text-secondary" style="font-size:19px;">Today, I bring together operational thinking, strategic communication, and AI-enabled workflows to help teams work smarter and businesses grow sustainably.</p>
-    </div>
-    <div class="btn-row" style="margin-top:24px;">
-      <a href="about.html" class="btn btn-secondary">Read Full Story</a>
+      <div class="card"><p style="margin:0;">I build trust before I build solutions.</p></div>
+      <div class="card"><p style="margin:0;">I focus on outcomes, not activity.</p></div>
+      <div class="card"><p style="margin:0;">I simplify complex problems into actionable plans.</p></div>
+      <div class="card"><p style="margin:0;">I believe AI should enhance human decision-making - not replace it.</p></div>
+      <div class="card"><p style="margin:0;">I value collaboration, accountability, and continuous improvement.</p></div>
+      <div class="card"><p style="margin:0;">I'm self-taught by nature - currently deepening my skills in conversational design and building SaaS projects on the side.</p></div>
     </div>
   </div>
 </section>
+
+<hr class="divider">
 
 <section class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Experience</span>
-      <h2>Nine years, five industries, one throughline</h2>
+      <span class="eyebrow">My Approach</span>
+      <h2>Every challenge begins with people, not process</h2>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-2">
       <div class="card">
-        <h3>Step4Progress</h3>
-        <p class="text-secondary" style="font-size:15px; margin-bottom:8px;">Business Development Manager &amp; UK Student Counsellor - guided students through admissions and visa processes, built the company's internal CRM, and grew their Instagram from 300 to 1,030+ followers in 10 days.</p>
-        <a href="https://www.step4progress.com" target="_blank" rel="noopener" class="text-secondary" style="font-size:13px; color:var(--accent); font-weight:600;">step4progress.com →</a>
+        <h3>Understand</h3>
+        <p class="text-secondary" style="margin:0;">Listen first. Identify the real business challenge before proposing solutions.</p>
       </div>
       <div class="card">
-        <h3>Vibe Media &amp; Production</h3>
-        <p class="text-secondary" style="font-size:15px; margin-bottom:0;">Client Success &amp; Branding - built long-term relationships and introduced AI-assisted workflows for healthcare and business clients.</p>
+        <h3>Simplify</h3>
+        <p class="text-secondary" style="margin:0;">Break complex problems into clear, manageable actions.</p>
       </div>
       <div class="card">
-        <h3>Titan Company Ltd. - Tanishq</h3>
-        <p class="text-secondary" style="font-size:15px; margin-bottom:0;">Assistant Store Manager - delivered premium customer experiences and achieved 120% of sales target through consultative selling.</p>
+        <h3>Collaborate</h3>
+        <p class="text-secondary" style="margin:0;">Work closely with stakeholders, customers, and teams to align goals and expectations.</p>
       </div>
-    </div>
-    <div class="btn-row" style="margin-top:32px;">
-      <a href="experience.html" class="btn btn-secondary">View Full Experience</a>
-    </div>
-  </div>
-</section>
-
-<section class="bg-secondary reveal">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Business Impact</span>
-      <h2>Delivering Measurable Results</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="metric"><div class="metric-num">25+</div><div class="metric-label">Client relationships managed across industries</div></div>
-      <div class="metric"><div class="metric-num">150+</div><div class="metric-label">Projects and campaigns delivered</div></div>
-      <div class="metric"><div class="metric-num">55%</div><div class="metric-label">Campaign conversion, up from 20%</div></div>
-      <div class="metric"><div class="metric-num">60%</div><div class="metric-label">Lead conversion, up from 30%</div></div>
-      <div class="metric"><div class="metric-num">120%</div><div class="metric-label">Sales target achieved in premium retail</div></div>
-      <div class="metric"><div class="metric-num">5</div><div class="metric-label">Industries: healthcare, media, retail, education, branding</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Case Studies</span>
-      <h2>Selected work, from problem to outcome</h2>
-    </div>
-    <div class="grid grid-3">
-      <a href="case-studies/step4progress.html" class="cs-card">
-        <span class="eyebrow" style="margin-bottom:4px;">Operations</span>
-        <h3>Step4Progress</h3>
-        <p class="text-secondary" style="font-size:15px;">Structuring student engagement and internal process to support growth.</p>
-        <span class="cs-arrow">Read Case Study →</span>
-      </a>
-      <a href="case-studies/healthcare-marketing.html" class="cs-card">
-        <span class="eyebrow" style="margin-bottom:4px;">Marketing</span>
-        <h3>Healthcare Marketing</h3>
-        <p class="text-secondary" style="font-size:15px;">Lifting campaign conversion from 20% to 55% through communication strategy.</p>
-        <span class="cs-arrow">Read Case Study →</span>
-      </a>
-      <a href="case-studies/ai-workflow-optimization.html" class="cs-card">
-        <span class="eyebrow" style="margin-bottom:4px;">AI &amp; Automation</span>
-        <h3>AI Workflow Optimization</h3>
-        <p class="text-secondary" style="font-size:15px;">Reducing manual effort and accelerating delivery with AI-assisted workflows.</p>
-        <span class="cs-arrow">Read Case Study →</span>
-      </a>
+      <div class="card">
+        <h3>Deliver</h3>
+        <p class="text-secondary" style="margin:0;">Measure success through outcomes, continuous improvement, and long-term value.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="bg-secondary reveal">
   <div class="wrap" style="text-align:center; max-width:640px;">
-    <h2>Let's connect</h2>
-    <p class="text-secondary" style="font-size:18px;">Interested in strategic account management, business operations, or AI-driven transformation. I'd welcome the conversation.</p>
+    <h2>See the work behind the words</h2>
     <div class="btn-row" style="justify-content:center;">
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-      <a href="resume/index.html" class="btn btn-secondary">Download CV</a>
+      <a href="experience.html" class="btn btn-primary">Explore Experience</a>
+      <a href="case-studies/index.html" class="btn btn-secondary">Read Case Studies</a>
     </div>
   </div>
 </section>
@@ -443,7 +421,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
     </ul>
   </div>
 </footer>
-
 <script>
 // Nav toggle (mobile)
 document.addEventListener('DOMContentLoaded', () => {
