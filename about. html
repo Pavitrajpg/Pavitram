@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   PAVITRA MUTHUKRISHNAN -- EXECUTIVE PORTFOLIO
+   PAVITRA MUTHUKRISHNAN - EXECUTIVE PORTFOLIO
    Design tokens
    ============================================================ */
 :root{
@@ -255,8 +255,11 @@ footer p{margin:0; font-size:14px; color:var(--text-secondary);}
 .footer-links a:hover{color:var(--accent);}
 
 /* ---------- Scroll reveal ---------- */
-.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease);}
-.reveal.in{opacity:1; transform:translateY(0);}
+/* Visible by default - safe fallback if JS doesn't run */
+.reveal{opacity:1; transform:none;}
+/* JS adds .js-armed once it confirms it's running, THEN hides for the animation */
+.reveal.js-armed{opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease);}
+.reveal.js-armed.in{opacity:1; transform:translateY(0);}
 
 /* ---------- Resume page ---------- */
 .resume-toolbar{display:flex; gap:var(--space-2); flex-wrap:wrap; margin-bottom:var(--space-4);}
@@ -319,6 +322,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
       <li><a href="about.html">About</a></li>
       <li><a href="experience.html">Experience</a></li>
       <li><a href="case-studies/index.html">Case Studies</a></li>
+      <li><a href="skills.html">Skills &amp; Tools</a></li>
       <li><a href="resume/index.html">Resume</a></li>
       <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
     </ul>
@@ -346,9 +350,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
 
 <section class="tight reveal">
   <div class="wrap prose">
-    <p>From healthcare marketing and media production to retail leadership and international education, every role has strengthened my ability to understand businesses, build relationships, and execute solutions that create value.</p>
+    <p>From live television broadcast and luxury retail to healthcare communication and international education, every role over these 10+ years has strengthened my ability to understand businesses, build relationships, and execute solutions that create value.</p>
     <p>I believe successful account management goes beyond maintaining relationships. It requires understanding business goals, aligning stakeholders, anticipating challenges, and delivering consistent results.</p>
-    <p>Today, I bring together operational thinking, strategic communication, and AI-enabled workflows to help teams work smarter and businesses grow sustainably.</p>
+    <p>Today, I bring together operational thinking, strategic communication, and AI-enabled workflows to help teams work smarter and businesses grow sustainably. That includes AI filmmaking - I create ad films and short-film trailers using Google Flow, a skill I'm now applying at Step4Progress to produce social media reels.</p>
     <p>Alongside my core work, I'm self-taught in conversational design and am currently building a few SaaS-related projects, applying the same problem-first approach to product and workflow design.</p>
   </div>
 </section>
@@ -417,6 +421,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
     <ul class="footer-links">
       <li><a href="mailto:pavitra962023@gmail.com">Email</a></li>
       <li><a href="https://linkedin.com/in/pavitra-muthukrishnan-b9a6038a" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="skills.html">Skills &amp; Tools</a></li>
       <li><a href="resume/index.html">Resume</a></li>
     </ul>
   </div>
@@ -458,9 +463,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Scroll reveal
+  // Scroll reveal (safe: only hides elements once JS confirms it's running)
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
+    revealEls.forEach(el => el.classList.add('js-armed'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -470,8 +476,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('in'));
   }
 
   // Active nav link highlight based on current page
