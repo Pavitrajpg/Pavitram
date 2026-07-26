@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light only">
+<meta name="color-scheme" content="dark only">
 <title>Pavitra Muthukrishnan - Strategic Account Management &amp; Business Operations</title>
 <meta name="description" content="Pavitra Muthukrishnan helps businesses simplify operations, strengthen client relationships, and solve complex business challenges through strategic thinking and AI-enabled solutions.">
 <meta property="og:title" content="Pavitra Muthukrishnan - Strategic Account Management & Business Operations">
@@ -12,24 +12,28 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    PAVITRA MUTHUKRISHNAN - EXECUTIVE PORTFOLIO
    Design tokens
    ============================================================ */
 :root{
-  color-scheme: light only;
-  --bg:#FFFFFF;
-  --bg-secondary:#F8F9FA;
-  --text-primary:#111827;
-  --text-secondary:#6B7280;
-  --accent:#2563EB;
-  --accent-dim:#EFF3FE;
-  --border:#E5E7EB;
-  --card:#FFFFFF;
+  color-scheme: dark only;
+  --bg:#0B0B0F;
+  --bg-secondary:#141319;
+  --text-primary:#F5F2EA;
+  --text-secondary:#9C97A8;
+  --accent:#D4A54A;
+  --accent-dim:#2B2415;
+  --accent-2:#7C3AED;
+  --accent-2-dim:#1E1730;
+  --border:#26242E;
+  --card:#141319;
+  --gradient-purple-orange: linear-gradient(90deg, #5B21B6 0%, #C2410C 100%);
 
   --font-body:'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  --font-display:'Fraunces', Georgia, serif;
 
   --max-width:1200px;
   --content-width:820px;
@@ -51,7 +55,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;}
-html{scroll-behavior:smooth; background:#FFFFFF;}
+html{scroll-behavior:smooth; background:#0B0B0F;}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
@@ -69,19 +73,20 @@ body{
 
 h1,h2,h3,h4{
   margin:0 0 var(--space-2) 0;
+  font-family:var(--font-display);
   font-weight:600;
-  letter-spacing:-0.02em;
-  line-height:1.15;
+  letter-spacing:-0.01em;
+  line-height:1.1;
 }
-h1{font-size:clamp(36px,6vw,68px); font-weight:700; letter-spacing:-0.03em;}
-h2{font-size:clamp(28px,4vw,40px);}
-h3{font-size:clamp(20px,2.4vw,24px);}
+h1{font-size:clamp(38px,6.5vw,72px); font-weight:600; font-optical-sizing:auto; letter-spacing:-0.02em;}
+h2{font-size:clamp(28px,4vw,42px);}
+h3{font-size:clamp(20px,2.4vw,25px);}
 p{margin:0 0 var(--space-2) 0; color:var(--text-primary);}
 a{color:inherit; text-decoration:none;}
 
 .eyebrow{
   font-size:13px;
-  font-weight:600;
+  font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--accent);
@@ -109,7 +114,7 @@ section.tight{padding:var(--space-6) 0;}
 /* ---------- Nav ---------- */
 .site-nav{
   position:sticky; top:0; z-index:100;
-  background:rgba(255,255,255,.85);
+  background:rgba(11,11,15,.85);
   backdrop-filter:saturate(180%) blur(12px);
   border-bottom:1px solid var(--border);
 }
@@ -117,7 +122,7 @@ section.tight{padding:var(--space-6) 0;}
   display:flex; align-items:center; justify-content:space-between;
   height:72px;
 }
-.nav-mark{font-weight:700; font-size:17px; letter-spacing:-0.01em;}
+.nav-mark{font-family:var(--font-display); font-weight:600; font-size:19px; letter-spacing:-0.01em; color:var(--accent);}
 .nav-links{display:flex; gap:var(--space-4); list-style:none; margin:0; padding:0; align-items:center;}
 .nav-links a{
   font-size:15px; font-weight:500; color:var(--text-secondary);
@@ -126,10 +131,10 @@ section.tight{padding:var(--space-6) 0;}
 }
 .nav-links a:hover, .nav-links a.active{color:var(--text-primary); border-bottom-color:var(--accent);}
 .nav-cta{
-  background:var(--text-primary); color:#fff!important; padding:10px 18px!important;
-  border-radius:var(--radius-sm); font-size:14px!important; border-bottom:none!important;
+  background:var(--accent); color:#0B0B0F!important; padding:10px 18px!important;
+  border-radius:var(--radius-sm); font-size:14px!important; border-bottom:none!important; font-weight:700!important;
 }
-.nav-cta:hover{background:var(--accent)!important;}
+.nav-cta:hover{background:var(--text-primary)!important;}
 .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
 .nav-toggle span{display:block; width:22px; height:2px; background:var(--text-primary); margin:5px 0; transition:transform .2s var(--ease), opacity .2s var(--ease);}
 
@@ -137,7 +142,7 @@ section.tight{padding:var(--space-6) 0;}
   .nav-links{
     display:none;
     position:fixed; top:72px; left:0; right:0; bottom:0;
-    background:#fff; flex-direction:column; align-items:flex-start;
+    background:var(--bg); flex-direction:column; align-items:flex-start;
     padding:var(--space-3) var(--space-4); gap:var(--space-2);
     z-index:99;
   }
@@ -153,14 +158,14 @@ section.tight{padding:var(--space-6) 0;}
   border:1px solid transparent; cursor:pointer;
   transition:transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
-.btn-primary{background:var(--text-primary); color:#fff;}
-.btn-primary:hover{background:var(--accent);}
+.btn-primary{background:var(--accent); color:#0B0B0F; font-weight:700;}
+.btn-primary:hover{background:var(--text-primary); transform:translateY(-2px);}
 .btn-secondary{background:transparent; color:var(--text-primary); border-color:var(--border);}
-.btn-secondary:hover{border-color:var(--text-primary);}
+.btn-secondary:hover{border-color:var(--accent); color:var(--accent);}
 .btn-row{display:flex; gap:var(--space-2); flex-wrap:wrap;}
 
 /* ---------- Hero ---------- */
-.hero{padding:var(--space-8) 0 var(--space-6);}
+.hero{padding:var(--space-7) 0 var(--space-6);}
 .hero-role{
   font-size:16px; color:var(--text-secondary); font-weight:500;
   margin-bottom:var(--space-3); letter-spacing:.01em;
@@ -169,9 +174,32 @@ section.tight{padding:var(--space-6) 0;}
 .hero .lede{max-width:640px; margin-top:var(--space-3);}
 .hero .btn-row{margin-top:var(--space-5);}
 
+.hero-grid{
+  display:grid; grid-template-columns:1.1fr 0.9fr; gap:var(--space-6); align-items:center;
+}
+.hero-greeting{color:var(--accent); font-weight:600; font-size:16px; margin-bottom:var(--space-1);}
+.hero-copy h1{font-size:clamp(38px,5.5vw,64px);}
+.hero-photo-wrap{position:relative; display:flex; justify-content:center; align-items:center;}
+.hero-glow{
+  position:absolute; width:340px; height:340px; border-radius:50%;
+  background:radial-gradient(circle, #7C3AED 0%, #C2410C 60%, transparent 75%);
+  filter:blur(50px); opacity:.55; z-index:0;
+}
+.hero-photo{
+  position:relative; z-index:1; width:100%; max-width:360px; aspect-ratio:3/4;
+  object-fit:cover; border-radius:var(--radius-lg); filter:none;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+}
+.hero-photo:hover{filter:none; transform:none;}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr; gap:var(--space-5);}
+  .hero-photo-wrap{order:-1;}
+  .hero-photo{max-width:280px;}
+}
+
 /* Career-arc signature strip */
 .arc-strip{
-  margin-top:var(--space-7);
+  margin-top:var(--space-6);
   display:flex; align-items:center; flex-wrap:wrap;
   gap:0; border-top:1px solid var(--border); padding-top:var(--space-4);
 }
@@ -189,24 +217,37 @@ section.tight{padding:var(--space-6) 0;}
 .card{
   background:var(--card);
   border:1px solid var(--border);
+  border-top:3px solid var(--accent);
   border-radius:var(--radius-md);
   padding:var(--space-4);
   transition:transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
 }
-.card:hover{transform:translateY(-3px); box-shadow:0 12px 32px -16px rgba(17,24,39,.16); border-color:#D8DCE3;}
+.card:nth-child(3n+2){border-top-color:var(--accent-2);}
+.card:nth-child(3n+3){border-top-color:var(--text-primary);}
+.card:hover{transform:translateY(-4px); box-shadow:0 14px 34px -16px rgba(25,18,37,.22);}
 
 .grid{display:grid; gap:var(--space-3);}
 .grid-2{grid-template-columns:repeat(2,1fr);}
 .grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
 @media (max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr;}}
 
-/* ---------- Metrics ---------- */
+/* ---------- Gradient stat band ---------- */
+.stat-band{
+  background:var(--gradient-purple-orange);
+  padding:var(--space-5) 0;
+}
+.stat-band .grid{gap:var(--space-3);}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--font-display); font-size:clamp(32px,5vw,48px); font-weight:600; color:#fff; letter-spacing:-0.01em;}
+.stat-label{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.8); margin-top:4px;}
+@media (max-width:760px){.stat-band .grid{grid-template-columns:repeat(2,1fr);}}
 .metric{padding:var(--space-3) 0; border-top:1px solid var(--border);}
-.metric-num{font-size:40px; font-weight:700; letter-spacing:-0.02em; color:var(--text-primary);}
+.metric-num{font-family:var(--font-display); font-size:44px; font-weight:600; letter-spacing:-0.02em; color:var(--accent);}
 .metric-label{font-size:15px; color:var(--text-secondary); margin-top:4px;}
 
 /* ---------- Experience accordion ---------- */
-.exp-card{border:1px solid var(--border); border-radius:var(--radius-md); margin-bottom:var(--space-2); overflow:hidden; background:#fff;}
+.exp-card{border:1px solid var(--border); border-radius:var(--radius-md); margin-bottom:var(--space-2); overflow:hidden; background:var(--card);}
 .exp-head{
   display:flex; justify-content:space-between; align-items:center; gap:var(--space-3);
   padding:var(--space-3) var(--space-4); cursor:pointer; user-select:none;
@@ -228,10 +269,12 @@ section.tight{padding:var(--space-6) 0;}
 .exp-body-inner ul{margin:var(--space-2) 0; padding-left:20px;}
 .exp-body-inner li{margin-bottom:6px; color:var(--text-primary);}
 .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:var(--space-2);}
-.tag{font-size:13px; background:var(--accent-dim); color:var(--accent); padding:6px 12px; border-radius:20px; font-weight:600;}
+.tag{font-size:13px; background:var(--accent-dim); color:var(--accent); padding:6px 12px; border-radius:20px; font-weight:700; display:inline-block; transform:rotate(-1.2deg); transition:transform .2s var(--ease);}
+.tag:nth-child(even){background:var(--accent-2-dim); color:var(--accent-2); transform:rotate(1deg);}
+.tag:hover{transform:rotate(0deg) scale(1.04);}
 
 /* ---------- Case study cards ---------- */
-.cs-card{display:block; border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--space-4); background:#fff;}
+.cs-card{display:block; border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--space-4); background:var(--card);}
 .cs-card .eyebrow{margin-bottom:var(--space-1);}
 .cs-card h3{margin-bottom:8px;}
 .cs-arrow{margin-top:var(--space-2); font-size:14px; font-weight:600; color:var(--accent); display:flex; align-items:center; gap:6px;}
@@ -351,15 +394,23 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero hero-split">
   <div class="wrap">
-    <img src="assets/images/profile.jpg" alt="Pavitra Muthukrishnan" class="profile-photo">
-    <p class="hero-role">Client Engagement &amp; Account Management · Business Operations · Content Strategy · AI-Enabled Workflows</p>
-    <h1>Turning business complexity into clear, measurable outcomes.</h1>
-    <p class="lede">10+ years across broadcast media, luxury retail, healthcare, and study abroad. I build the systems, relationships, and strategy behind consistent business results.</p>
-    <div class="btn-row">
-      <a href="experience.html" class="btn btn-primary">Explore Experience</a>
-      <a href="resume/index.html" class="btn btn-secondary">View Resume</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1>Pavitra<br>Muthukrishnan</h1>
+        <p class="hero-role">Strategic Thinker. Problem Solver. Impact Maker.</p>
+        <p class="lede">I help businesses grow through strategic operations, client success, CRM optimization, and AI-powered transformation.</p>
+        <div class="btn-row">
+          <a href="experience.html" class="btn btn-primary">Explore My Work</a>
+          <a href="resume/index.html" class="btn btn-secondary">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-glow"></div>
+        <img src="assets/images/profile.jpg" alt="Pavitra Muthukrishnan" class="hero-photo">
+      </div>
     </div>
 
     <div class="arc-strip" aria-label="Career path across industries">
@@ -371,6 +422,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
     </div>
   </div>
 </header>
+
 
 <section class="bg-secondary reveal">
   <div class="wrap">
@@ -415,6 +467,17 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
   </div>
 </section>
 
+<section class="stat-band">
+  <div class="wrap">
+    <div class="grid grid-4">
+      <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-item"><div class="stat-num">20,000+</div><div class="stat-label">Projects Delivered</div></div>
+      <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Campaigns Delivered</div></div>
+      <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Industries</div></div>
+    </div>
+  </div>
+</section>
+
 <section class="bg-secondary reveal">
   <div class="wrap">
     <div class="section-head">
@@ -422,9 +485,6 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
       <h2>Delivering Measurable Results</h2>
     </div>
     <div class="grid grid-3">
-      <div class="metric"><div class="metric-num">10+</div><div class="metric-label">Years across broadcast media, retail, healthcare, and study abroad</div></div>
-      <div class="metric"><div class="metric-num">20,000+</div><div class="metric-label">Marketing projects and deliverables executed</div></div>
-      <div class="metric"><div class="metric-num">50+</div><div class="metric-label">Marketing campaigns delivered</div></div>
       <div class="metric"><div class="metric-num">55%</div><div class="metric-label">Campaign conversion, up from 20%</div></div>
       <div class="metric"><div class="metric-num">60%</div><div class="metric-label">Lead conversion, up from 30%</div></div>
       <div class="metric"><div class="metric-num">120%</div><div class="metric-label">Sales target achieved in premium retail</div></div>
@@ -485,17 +545,34 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
 </footer>
 
 <script>
-// Nav toggle (mobile)
+// Nav toggle (mobile) - JS-controlled visibility, doesn't rely on CSS media query support
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
+
+  function layoutNav() {
+    if (!links) return;
+    const isMobile = window.matchMedia('(max-width:860px)').matches;
+    if (isMobile) {
+      links.style.display = links.classList.contains('open') ? 'flex' : 'none';
+    } else {
+      links.style.display = 'flex';
+      links.classList.remove('open');
+    }
+  }
+
+  layoutNav();
+  window.addEventListener('resize', layoutNav);
+
   if (toggle && links) {
     toggle.addEventListener('click', () => {
-      const open = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
+      links.classList.toggle('open');
+      layoutNav();
+      toggle.setAttribute('aria-expanded', links.classList.contains('open'));
     });
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       links.classList.remove('open');
+      layoutNav();
       toggle.setAttribute('aria-expanded', 'false');
     }));
   }
